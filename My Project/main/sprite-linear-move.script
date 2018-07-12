@@ -2,6 +2,7 @@ function init(self)
 	-- Add initialization code here
 	-- Remove this function if not needed
 	self.x = 0;
+	self.y = 0;
 	local p = go.get_position();
 	p.x = 500;
 	p.y = 500;
@@ -28,8 +29,10 @@ function update(self, dt)
 	-- Add update code here
 	-- Remove this function if not needed
 	self.x = self.x + 0.1;
+	self.y = self.y + 0.1;
 	local pos = go.get_position();
-	pos.x = 500 + 100*math.sin(self.x);
+	pos.x = 500 + 300*math.sin(self.x);
+	pos.y = 500 + 100*math.cos(self.y);
 	go.set_position(pos) 
 end
 
