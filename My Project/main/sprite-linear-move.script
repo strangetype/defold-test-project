@@ -1,0 +1,38 @@
+function init(self)
+	-- Add initialization code here
+	-- Remove this function if not needed
+	self.x = 0;
+	local p = go.get_position();
+	p.x = 500;
+	p.y = 500;
+	go.set_position(p);
+end
+
+function final(self)
+	-- Add finalization code here
+	-- Remove this function if not needed
+end
+
+function update(self, dt)
+	-- Add update code here
+	-- Remove this function if not needed
+	self.x = self.x + 0.1;
+	local pos = go.get_position();
+	pos.x = 500 + 100*math.sin(self.x);
+	go.set_position(pos) 
+end
+
+function on_message(self, message_id, message, sender)
+	-- Add message-handling code here
+	-- Remove this function if not needed
+end
+
+function on_input(self, action_id, action)
+	-- Add input-handling code here
+	-- Remove this function if not needed
+end
+
+function on_reload(self)
+	-- Add reload-handling code here
+	-- Remove this function if not needed
+end
