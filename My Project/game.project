@@ -7,3 +7,6 @@ shared_state = 1
 [project]
 title = My Project
 
+[html5]
+htmlfile = /main/base-template.html
+

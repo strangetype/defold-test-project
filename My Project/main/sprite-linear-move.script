@@ -6,6 +6,17 @@ function init(self)
 	p.x = 500;
 	p.y = 500;
 	go.set_position(p);
+
+	function callback(result)
+		print(result)
+	end
+	
+	local prom = html5.run("someExternalMethod()");
+
+	print(prom)
+	
+	prom(callback)
+	
 end
 
 function final(self)
